@@ -10,11 +10,68 @@
     </parent>
 
     <artifactId>ecom-ear</artifactId>
+    <packaging>ear</packaging>
+    <name>ecom-ear</name>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.techmart</groupId>
+            <artifactId>ecom-core</artifactId>
+            <version>1.0-</version>
+            <type>jar</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.techmart</groupId>
+            <artifactId>ecom-ejb</artifactId>
+            <version>1.0-</version>
+            <type>ejb</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.techmart</groupId>
+            <artifactId>ecom-web</artifactId>
+            <version>1.0-</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.name}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <modules>
+                        <jarModule>
+                            <groupId>com.techmart</groupId>
+                            <artifactId>ecom-core</artifactId>
+                            <bundleFileName>ecom-core.jar</bundleFileName>
+                        </jarModule>
+                        <ejbModule>
+                            <groupId>com.techmart</groupId>
+                            <artifactId>ecom-ejb</artifactId>
+                            <bundleFileName>ecom-ejb.jar</bundleFileName>
+                        </ejbModule>
+                        <webModule>
+                            <groupId>com.techmart</groupId>
+                            <artifactId>ecom-web</artifactId>
+                            <contextRoot>/techmart</contextRoot>
+                            <bundleFileName>ecom-web.war</bundleFileName>
+                        </webModule>
+                    </modules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
