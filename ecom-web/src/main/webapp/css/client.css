@@ -1,0 +1,113 @@
+/* =========================================
+   TechMart Client Theme (Blue & White)
+   ========================================= */
+
+body {
+    background-color: #f8fbff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Brand Colors */
+.bg-brand { background-color: #0056b3 !important; }
+.text-brand { color: #0056b3 !important; }
+
+/* Typography */
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* -----------------------------------------
+   Product Cards & Micro-interactions
+   ----------------------------------------- */
+.product-card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    background: #fff;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 86, 179, 0.12);
+}
+
+.product-img-wrap {
+    height: 220px;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-img-wrap img {
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img-wrap img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* -----------------------------------------
+   UI Components (Buttons & Badges)
+   ----------------------------------------- */
+.category-pill {
+    background-color: rgba(0, 86, 179, 0.08);
+    color: #0056b3;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.btn-outline-brand {
+    border: 2px solid #0056b3;
+    color: #0056b3;
+    font-weight: 600;
+}
+
+.btn-outline-brand:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.filter-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.product-img-wrap {
+    height: 200px; /* Forces all image boxes to be exactly the same height */
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-img-wrap img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Prevents the image from stretching */
+    transition: transform 0.5s ease;
+}
+
+/* -----------------------------------------
+   Single Product View
+   ----------------------------------------- */
+.product-detail-img {
+    max-height: 450px;
+    object-fit: contain;
+    width: 100%;
+}
+
+/* Make the bootstrap slider arrows darker and cleaner */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 60%;
+    filter: invert(1);
+}
