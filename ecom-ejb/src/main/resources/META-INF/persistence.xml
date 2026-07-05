@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+
+    <persistence-unit name="TechMartPU" transaction-type="JTA">
+        <jta-data-source>jdbc/TechMartDB</jta-data-source>
+
+        <class>com.techmart.entity.Product</class>
+        <class>com.techmart.entity.Category</class>
+        <class>com.techmart.entity.Color</class>
+        <class>com.techmart.entity.Storage</class>
+        <class>com.techmart.entity.User</class>
+        <class>com.techmart.entity.Address</class>
+        <class>com.techmart.entity.Brand</class>
+        <class>com.techmart.entity.Cart</class>
+        <class>com.techmart.entity.CartItem</class>
+        <class>com.techmart.entity.Notification</class>
+        <class>com.techmart.entity.Order</class>
+        <class>com.techmart.entity.OrderItem</class>
+        <properties>
+            <property name="eclipselink.ddl-generation" value="none"/>
+            <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+
+            <property name="eclipselink.logging.level.sql" value="FINE"/>
+            <property name="eclipselink.logging.parameters" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
