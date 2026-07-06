@@ -1,6 +1,7 @@
 package com.techmart.impl;
 
 import com.techmart.core.enums.Role;
+import com.techmart.core.monitoring.TrackPerformance;
 import com.techmart.entity.User;
 import com.techmart.service.UserService;
 import jakarta.ejb.Stateless;
@@ -10,6 +11,7 @@ import jakarta.persistence.PersistenceContext;
 import java.util.List;
 
 @Stateless
+@TrackPerformance
 public class UserServiceImpl implements UserService {
 
     @PersistenceContext(unitName = "TechMartPU")

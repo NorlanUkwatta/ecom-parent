@@ -1,6 +1,7 @@
 package com.techmart.impl;
 
 import com.techmart.core.enums.Role;
+import com.techmart.core.monitoring.TrackPerformance;
 import com.techmart.entity.Notification;
 import com.techmart.entity.User;
 import com.techmart.service.NotificationService;
@@ -11,6 +12,7 @@ import jakarta.persistence.PersistenceContext;
 import java.util.List;
 
 @Stateless
+@TrackPerformance
 public class NotificationServiceImpl implements NotificationService {
 
     @PersistenceContext(unitName = "TechMartPU")

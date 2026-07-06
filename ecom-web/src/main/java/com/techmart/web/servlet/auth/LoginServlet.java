@@ -49,8 +49,14 @@ public class LoginServlet extends HttpServlet {
         String identifier = req.getParameter("identifier");
         String password = req.getParameter("password");
 
+        if (identifier == null) {
+            identifier = "";
+        }
+
+        String trimmedIdentifier = identifier.trim();
+
         String hashedPassword = SecurityUtil.hashPassword(password);
-        User user = authService.login(identifier.trim().toLowerCase(), hashedPassword);
+        User user = authService.login(trimmedIdentifier, hashedPassword);
 
         if (user != null) {
 

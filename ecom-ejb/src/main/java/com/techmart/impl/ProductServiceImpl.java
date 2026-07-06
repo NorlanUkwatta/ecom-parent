@@ -1,5 +1,6 @@
 package com.techmart.impl;
 
+import com.techmart.core.monitoring.TrackPerformance;
 import com.techmart.entity.*;
 import com.techmart.service.ProductService;
 import jakarta.ejb.Stateless;
@@ -10,6 +11,7 @@ import jakarta.persistence.TypedQuery;
 import java.util.List;
 
 @Stateless
+@TrackPerformance
 public class ProductServiceImpl implements ProductService {
 
     @PersistenceContext(unitName = "TechMartPU")

@@ -1,4 +1,4 @@
-package com.techmart.messaging; // Adjust package name if yours is different
+package com.techmart.messaging;
 
 import jakarta.annotation.Resource;
 import jakarta.ejb.Stateless;

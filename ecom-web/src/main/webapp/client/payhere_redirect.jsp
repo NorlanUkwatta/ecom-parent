@@ -27,7 +27,7 @@
     <input type="hidden" name="merchant_id" value="${merchantId}">
     <input type="hidden" name="return_url" value="http://localhost:8080${pageContext.request.contextPath}/payment/success">
     <input type="hidden" name="cancel_url" value="http://localhost:8080${pageContext.request.contextPath}/payment/cancel">
-    <input type="hidden" name="notify_url" value="https://2515-2402-d000-a500-6bba-85e6-e495-c36d-717a.ngrok-free.app${pageContext.request.contextPath}/payhere/notify">
+    <input type="hidden" name="notify_url" value=" https://71fd-2402-d000-a500-6bba-398b-3182-167f-67c0.ngrok-free.app${pageContext.request.contextPath}/payhere/notify">
 
     <input type="hidden" name="order_id" value="${orderId}">
     <input type="hidden" name="items" value="TechMart Order #${orderId}">
